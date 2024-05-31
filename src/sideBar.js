@@ -19,6 +19,7 @@ function buttonTodo() {
 
   const creatBtn = document.createElement("button");
   creatBtn.innerHTML = "Add";
+  creatBtn.setAttribute("data-modal-target", "modal");
   todos.appendChild(creatBtn);
 }
 
