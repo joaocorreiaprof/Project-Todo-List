@@ -31,10 +31,14 @@ main {
   font-weight: bold;
 }
 
+.todos {
+  display: flex;
+  flex-direction: column;
+}
 /*Content Section*/
 
 .content {
-  background-color: #ede0e0;
+  background-color: #cdcdcd;
   width: 80vw;
   height: 100vh;
 }

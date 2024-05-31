@@ -4,8 +4,6 @@ This project is a simple, yet powerful tool to help you manage your tasks and st
 
 ## Todo xD
 
-- Change the name header.js becasue is no longer header and also his imports and exports related;
-
 ## Brainstorming
 
 -todo.js is working fine and also his class constructure
