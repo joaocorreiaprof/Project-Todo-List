@@ -1,5 +1,3 @@
-// index.js
-
 import "./style.css";
 import { logoTextCont, buttonTodo } from "./sideBar";
 import { openModal } from "./modalButton.js";

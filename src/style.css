@@ -6,14 +6,14 @@
 main {
   display: flex;
 }
-/*Side Section*/
 
+/* Side Section */
 .sideBar {
   display: flex;
   flex-direction: column;
   width: 20vw;
   height: 100vh;
-  background-color: #f1f5f9;
+  background-color: #e3e3e3;
 }
 
 .logoText {
@@ -35,8 +35,8 @@ main {
   display: flex;
   flex-direction: column;
 }
-/*Modal Section*/
 
+/* Modal Section */
 .modal {
   position: fixed;
   top: 50%;
@@ -98,10 +98,23 @@ main {
   pointer-events: all;
 }
 
-/*Content Section*/
+.modal-body form input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 7px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
 
+.modal-body form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Content Section */
 .content {
-  background-color: white;
+  background-color: #f9f9f9;
   width: 80vw;
   height: 100vh;
 }
