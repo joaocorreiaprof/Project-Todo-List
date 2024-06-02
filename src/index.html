@@ -10,9 +10,8 @@
     <main>
       <div class="sideBar">
         <div class="logoText"></div>
-        <div class="todos">
-          <p>Todo Projects come here!</p>
-        </div>
+        <h3>Projects</h3>
+        <div class="projects"></div>
       </div>
       <div class="content">
         <div class="modal" id="modal">
@@ -21,7 +20,7 @@
             <button data-close-button class="close-button">&times;</button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="project-form">
               <label for="project-name">Project name:</label><br />
               <input
                 type="text"
@@ -47,21 +46,7 @@
               <input type="radio" id="high" name="priority" value="High" />
               <label for="high">High</label>
               <br />
-
-              <label for="notes">Notes:</label>
-              <br />
-
-              <input
-                type="text"
-                id="notes"
-                class="notes"
-                placeholder="Write a note...."
-              />
-              <br />
-              <input type="checkbox" id="checklist" name="done" value="done" />
-              <label for="done">Done</label>
-              <br />
-              <input type="submit" value="submit" />
+              <input type="submit" value="Submit" />
             </form>
           </div>
         </div>

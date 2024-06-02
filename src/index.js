@@ -1,19 +1,20 @@
 import "./style.css";
-import { logoTextCont, buttonTodo } from "./sideBar";
+import { logoTextCont, buttonTodo, defaultProjects } from "./sideBar";
 import { openModal } from "./modalButton.js";
+import "./submit.js";
 
 function displaySideBar() {
   logoTextCont();
   buttonTodo();
+  defaultProjects();
 
   const addBtn = document.querySelector("[data-modal-target='modal']");
-  addBtn.addEventListener("click", () => {
-    const modal = document.querySelector("#modal");
-    openModal(modal);
-  });
-
-  // let todo = new Todos("Clean", "clean the fuucntion house");
-  // todo.sayInfo();
+  if (addBtn) {
+    addBtn.addEventListener("click", () => {
+      const modal = document.querySelector("#modal");
+      openModal(modal);
+    });
+  }
 }
 
 displaySideBar();
