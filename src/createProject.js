@@ -7,8 +7,15 @@ class Project {
   addProject() {
     const projectsDiv = document.querySelector(".projects");
     const projectButton = document.createElement("button");
+    projectButton.classList.add("defaultProject");
     projectButton.textContent = this.title;
     projectsDiv.appendChild(projectButton);
+
+    // Add event listener to the user projects
+    projectButton.addEventListener("click", () => {
+      const displayProject = document.querySelector(".selectedProject");
+      displayProject.innerHTML = this.title;
+    });
   }
 }
 
@@ -17,4 +24,4 @@ function addProjectToDiv(title, description) {
   newProject.addProject();
 }
 
-export { Project, addProjectToDiv };
+export { addProjectToDiv };
