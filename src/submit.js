@@ -1,4 +1,8 @@
-import { addProjectToDiv } from "./createProject.js";
+import { addProjectToDiv, Project } from "./createProject.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  Project.loadProjects();
+});
 
 const form = document.getElementById("project-form");
 if (form) {
