@@ -50,7 +50,12 @@ class Project {
   }
 
   deleteProject() {
-    localStorage.removeItem("projects");
+    let projects = JSON.parse(localStorage.getItem("projects")) || [];
+    projects = projects.filter(
+      (project) =>
+        project.title !== this.title || project.description !== this.description
+    );
+    localStorage.setItem("projects", JSON.stringify(projects));
   }
 
   static loadProjects() {
