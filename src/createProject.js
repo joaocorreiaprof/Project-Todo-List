@@ -2,6 +2,7 @@ class Project {
   constructor(title, description) {
     this.title = title;
     this.description = description;
+    this.todo = [];
   }
 
   addProject() {
@@ -44,7 +45,7 @@ class Project {
           project.description === this.description
       )
     ) {
-      projects.push({ title: this.title, description: this.description });
+      projects.push(new Project(this.title, this.description));
       localStorage.setItem("projects", JSON.stringify(projects));
     }
   }
