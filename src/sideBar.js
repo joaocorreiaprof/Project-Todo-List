@@ -33,45 +33,6 @@ function buttonTodo() {
 
 function defaultProjects() {
   const defaultProject = document.querySelector(".projects");
-
-  /*const personalLogo = document.createElement("img");
-  personalLogo.src = personal;
-  defaultProject.appendChild(personalLogo);*/
-
-  const personal = document.createElement("button");
-  personal.classList.add("defaultProject");
-  personal.innerHTML = "Personal Development";
-  defaultProject.appendChild(personal);
-
-  const work = document.createElement("button");
-  work.classList.add("defaultProject");
-  work.innerHTML = "Work";
-  defaultProject.appendChild(work);
-
-  const home = document.createElement("button");
-  home.classList.add("defaultProject");
-  home.innerHTML = "Home Improvement";
-  defaultProject.appendChild(home);
-
-  const health = document.createElement("button");
-  health.classList.add("defaultProject");
-  health.innerHTML = "Health & Improvement";
-  defaultProject.appendChild(health);
-
-  const events = document.createElement("button");
-  events.classList.add("defaultProject");
-  events.innerHTML = "Events Planning";
-  defaultProject.appendChild(events);
-
-  const finance = document.createElement("button");
-  finance.classList.add("defaultProject");
-  finance.innerHTML = "Finance";
-  defaultProject.appendChild(finance);
-
-  const hobbies = document.createElement("button");
-  hobbies.classList.add("defaultProject");
-  hobbies.innerHTML = "Hobbies";
-  defaultProject.appendChild(hobbies);
 }
 
 export { logoTextCont, buttonTodo, defaultProjects };
