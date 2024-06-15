@@ -1,8 +1,12 @@
 import "./style.css";
-import { logoTextCont, buttonTodo, defaultProjects } from "./sideBar";
-import { openModal } from "./modalButton.js";
-import "./submit.js";
-import { addProjectSelectedListeners } from "./rightContent.js";
+import {
+  logoTextCont,
+  buttonTodo,
+  defaultProjects,
+} from "./modules/sideBar.js";
+import { openModal } from "./modules/modalButton.js";
+import "./modules/submit.js";
+import { addProjectSelectedListeners } from "./modules/rightContent.js";
 
 function displaySideBar() {
   logoTextCont();

@@ -1,11 +1,4 @@
-import logo from "./icons/rectangle-list-regular.svg";
-//import personal from "./icons/personal.svg";
-//import work from "./icons/work.svg";
-//import home from "./icons/home.svg";
-//import health from "./icons/health.svg";
-//import events from "./icons/event.svg"
-//import finance from "./icons/finance.svg"
-//import hobbies from "./hobbies.svg"
+import logo from "../icons/rectangle-list-regular.svg";
 
 function logoTextCont() {
   const logoTextCont = document.querySelector(".logoText");
