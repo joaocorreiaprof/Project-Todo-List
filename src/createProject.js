@@ -4,6 +4,10 @@ class Project {
     this.description = description;
     this.todo = [];
   }
+  //Add todo ??
+  addTodo(todoItem) {
+    this.todo.push(todoItem);
+  }
 
   addProject() {
     const projectsDiv = document.querySelector(".projects");

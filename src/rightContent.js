@@ -1,3 +1,5 @@
+import { Project } from "./createProject";
+
 function addProjectSelectedListeners() {
   const projectSelected = document.querySelectorAll(".defaultProject");
   const displayProject = document.querySelector(".selectedProject");
