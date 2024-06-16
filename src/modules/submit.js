@@ -1,5 +1,8 @@
 import { addProjectToDiv, Project } from "./createProject.js";
+import { removeEmptyProject } from "./sideBar.js";
+import { displayProjectTodos } from "./rightContent.js";
 
+const displayProject = document.querySelector(".selectedProject");
 document.addEventListener("DOMContentLoaded", () => {
   Project.loadProjects();
 });
@@ -20,6 +23,10 @@ function closeModal(modal) {
   modal.classList.remove("active");
   const overlay = document.getElementById("overlay");
   overlay.classList.remove("active");
+  removeEmptyProject();
+  let projects = JSON.parse(localStorage.getItem("projects")) || [];
+  displayProject.innerHTML = projects[0].title;
+  displayProjectTodos(projects[0].title);
 }
 
 export { form };

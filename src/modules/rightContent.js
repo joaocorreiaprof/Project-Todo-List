@@ -1,4 +1,4 @@
-import { Project } from "./createProject.js";
+import { empty } from "./sideBar";
 
 function addProjectSelectedListeners() {
   const projectSelected = document.querySelectorAll(".defaultProject");
@@ -79,7 +79,7 @@ function createTodoButton(todoText) {
 
 function displayProjectTodos(projectTitle) {
   const displayTodos = document.querySelector(".todosProject");
-  displayTodos.innerHTML = ""; // Clear existing todos
+  displayTodos.innerHTML = "";
 
   const buttonTodo = document.createElement("button");
   buttonTodo.textContent = "Add todo";
@@ -109,6 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (projects.length > 0 && displayProject.innerHTML === "") {
     displayProject.innerHTML = projects[0].title;
     displayProjectTodos(projects[0].title);
+  }
+  if (projects.length < 1) {
+    empty();
   }
 });
 

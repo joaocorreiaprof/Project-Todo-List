@@ -1,5 +1,7 @@
 import logo from "../icons/rectangle-list-regular.svg";
 
+let emptyProjectElement;
+
 function logoTextCont() {
   const logoTextCont = document.querySelector(".logoText");
 
@@ -28,4 +30,26 @@ function defaultProjects() {
   const defaultProject = document.querySelector(".projects");
 }
 
-export { logoTextCont, buttonTodo, defaultProjects };
+function empty() {
+  const sideBarEmpty = document.querySelector(".sideBar");
+
+  // Check if the element already exists to avoid creating duplicates
+  if (!emptyProjectElement) {
+    emptyProjectElement = document.createElement("p");
+    emptyProjectElement.classList.add("emptyProject");
+    emptyProjectElement.innerHTML = "Create a project!";
+    sideBarEmpty.appendChild(emptyProjectElement);
+  }
+}
+
+function removeEmptyProject() {
+  const sideBarEmpty = document.querySelector(".sideBar");
+
+  // Check if the element exists before attempting to remove it
+  if (emptyProjectElement) {
+    sideBarEmpty.removeChild(emptyProjectElement);
+    emptyProjectElement = null;
+  }
+}
+
+export { logoTextCont, buttonTodo, defaultProjects, empty, removeEmptyProject };
