@@ -21,7 +21,7 @@ function buttonTodo() {
 
   const creatBtn = document.createElement("button");
   creatBtn.classList.add("createBtn");
-  creatBtn.innerHTML = "Add";
+  creatBtn.innerHTML = "+";
   creatBtn.setAttribute("data-modal-target", "modal");
   projects.appendChild(creatBtn);
 }

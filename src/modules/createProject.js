@@ -1,3 +1,5 @@
+import { displayProjectTodos } from "./rightContent";
+
 class Project {
   constructor(title, description) {
     this.title = title;
@@ -18,7 +20,7 @@ class Project {
 
     const deleteButton = document.createElement("button");
     deleteButton.classList.add("deleteProject");
-    deleteButton.textContent = "Delete";
+    deleteButton.textContent = "x";
     projectContainer.appendChild(deleteButton);
 
     projectsDiv.appendChild(projectContainer);
@@ -27,12 +29,16 @@ class Project {
     projectButton.addEventListener("click", () => {
       const displayProject = document.querySelector(".selectedProject");
       displayProject.innerHTML = this.title;
+      displayProjectTodos(this.title);
     });
 
     // Add event listener to the delete button
     deleteButton.addEventListener("click", () => {
       this.deleteProject();
       projectsDiv.removeChild(projectContainer);
+      if (projectsDiv.childElementCount === 0) {
+        empty();
+      }
     });
   }
 

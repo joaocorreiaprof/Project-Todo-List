@@ -3,25 +3,10 @@ import { empty } from "./sideBar";
 function addProjectSelectedListeners() {
   const projectSelected = document.querySelectorAll(".defaultProject");
   const displayProject = document.querySelector(".selectedProject");
-  const displayTodos = document.querySelector(".todosProject");
-
-  const buttonTodo = document.createElement("button");
-  buttonTodo.textContent = "Add todo";
-  buttonTodo.classList.add("todoButton");
-
-  buttonTodo.addEventListener("click", () => {
-    let projects = JSON.parse(localStorage.getItem("projects")) || [];
-    projects.forEach((projectData) => {
-      if (projectData.title === displayProject.textContent) {
-        createTodoInput(projectData, projects);
-      }
-    });
-  });
-
-  displayTodos.appendChild(buttonTodo);
 
   projectSelected.forEach((button) => {
     button.addEventListener("click", () => {
+      console.log("Project selected:", button.innerHTML);
       displayProject.innerHTML = button.innerHTML;
       displayProjectTodos(button.innerHTML);
     });
@@ -92,6 +77,7 @@ function displayProjectTodos(projectTitle) {
   );
 
   if (selectedProject) {
+    console.log("Selected project todos:", selectedProject.todo);
     selectedProject.todo.forEach((todoText) => {
       displayTodos.appendChild(createTodoButton(todoText));
     });
