@@ -2,6 +2,10 @@
 
 This project is a simple, yet powerful tool to help you manage your tasks and stay organized. Whether you're a developer looking to contribute or a user in need of a robust task manager, this project is designed to meet your needs.
 
+## Live Preview
+
+https://github.com/joaocorreiaprof/Project-Todo-List
+
 ## Features
 
 - **Add Tasks**: Easily add tasks with a title, optional description and date.
@@ -41,4 +45,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 João Correia - joaocorreiaprof@gmail.com
-
