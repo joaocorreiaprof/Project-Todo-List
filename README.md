@@ -4,7 +4,7 @@ This project is a simple, yet powerful tool to help you manage your tasks and st
 
 ## Live Preview
 
-https://github.com/joaocorreiaprof/Project-Todo-List
+https://joaocorreiaprof.github.io/Project-Todo-List/
 
 ## Features
 
