@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <main>
+      <div class="sideBar">
+        <div class="logoText"></div>
+        <h3>Projects</h3>
+        <div class="projects"></div>
+      </div>
+      <div class="content">
+        <h4>Make your dreams come true!</h4>
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <div class="modalTitle">Add project:</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form id="project-form">
+              <label for="project-name">Project name:</label><br />
+              <input
+                type="text"
+                id="project-name"
+                name="project-name"
+                placeholder="Your project name..."
+                required
+              /><br />
+              <label for="project-description">Project description:</label
+              ><br />
+              <input
+                type="text"
+                id="project-description"
+                name="project-description"
+                placeholder="Description..."
+              />
+
+              <p>Project priority:</p>
+              <input type="radio" id="low" name="priority" value="Low" />
+              <label for="low">Low</label><br />
+              <input type="radio" id="medium" name="priority" value="Medium" />
+              <label for="medium">Medium</label><br />
+              <input type="radio" id="high" name="priority" value="High" />
+              <label for="high">High</label>
+              <br />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+        <div class="selectedProject"></div>
+        <div class="todosProject"></div>
+      </div>
+      <div id="overlay"></div>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>
